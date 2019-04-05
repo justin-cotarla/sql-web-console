@@ -44,14 +44,14 @@ class App extends Component {
       <Table striped>
         <Table.Header>
           <Table.Row>
-            {headers.map(value => <Table.HeaderCell key={value}>{value}</Table.HeaderCell>)}
+            {headers.map((value, index) => <Table.HeaderCell key={index}>{value}</Table.HeaderCell>)}
           </Table.Row>
         </Table.Header>
         <Table.Body>
           {rows.map((row, index) => (
             <Table.Row key={index}>
               {
-                row.map(value => <Table.Cell key={value}>{value}</Table.Cell>)
+                row.map((value, index) => <Table.Cell key={index}>{value}</Table.Cell>)
               }
             </Table.Row>
           ))}
